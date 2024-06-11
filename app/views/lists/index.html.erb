@@ -1,8 +1,7 @@
-<h1> Hello you !</h1>
 
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= list.comment %></li>
-  <% end %>
-</ul>
 
+<% @lists.each do |list| %>
+  <%= link_to list.name, list_path(list) %>
+<% end %>
+
+<%= link_to "Créer une nouvelle liste", new_list_path %>
